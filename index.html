@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Pigeon Home</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+    <!-------------Owl-Carousel----------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+
+</head>
+<body>
+    <!------------------------ Navigation ------------------------------>
+    
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray"><img class="nav-logo" src="./assets/Picture1455.png" alt=""></a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="#" onclick="home()">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Categories</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Archives</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="page1()">Pages</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!----------x------------- Navigation --------------x--------------->
+
+    
+
+    <!---------------------Main Site Section------------------------>
+
+    <main>
+
+        <!----------Site Title------------>
+        <section class="site-title">
+            <div class="site-background">
+                <img class="logo" src="./assets/Picture1.png" alt="no img">
+            <!--
+                <h3>Tour & Travels</h3>
+                <h1>Amazing places on the earth</h1>
+            
+                <button class="btn">Explore</button>
+            -->
+            </div>
+        </section>
+        <!----x-----Site Title------x----->
+
+
+        <!----------Blog Carousel---------->
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content">
+                            <img class = 'college-logo' src="./assets/galgotias-university-vector-logo.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Galgotias University</h3>
+                                <button id = "button_pop" class="button_pop btn btn-blog">Signin</button>
+                               
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img class = 'college-logo' src="./assets/sharda-university.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Sharda University</h3>
+                                <button class="btn btn-blog">Signin</button>
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img class = 'college-logo' src="./assets/amity-university-vector-logo.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Amity University</h3>
+                                <button class="btn btn-blog">Signin</button>
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img class = 'college-logo' src="./assets/stanford-logo-1.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Stanford University</h3>
+                                <button class="btn btn-blog">Signin</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!----x-----Blog Caurosel----x----->
+       
+
+    </main>
+
+     <!-------------------------Popup Login------------------------------>
+     
+     <div id="login-div" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close"><i class="far fa-times-circle"></i></a>
+            <img src="./assets/1578668223024.png" alt="user">
+            <input type="text" placeholder="User ID" id="email_field" >
+            <input type="password" placeholder="Password" id="password_field">
+            <button id = "btn-login" class="button_pop btn btn-blog" type="button" onclick="login()">Signin</button>
+        </div>
+    </div>
+
+    <!-------------x-----------Popup Login--------------x--------------->
+
+    <!--------x------------Main Site Section---------------x-------->
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>Hey there! I m Shubh</p>
+            </div>
+            <!-- <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                   <a href=""></a>
+                </div>
+                <div class="flex-row">
+                   
+                </div>
+            </div> -->
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+
+     <!---------------Popup js------------------->
+    <script src="./js/popup.js"></script>
+
+    <!------Jquery library file ------>
+    <script src="./js/Jquery3.6.0.min.js"></script>
+
+    <!-------------Owl-Caurosel js-------------->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/caurosel.js"></script>
+
+    <!-- Custom JS file -->
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/login2.js"></script> -->
+
+    <script>
+        function home(){window.location.replace("index.html")}
+        function page1(){window.location.replace("page1.html")}
+    </script>
+
+</body>
+</html>
