@@ -1,12 +1,12 @@
 
 var firebaseConfig = {
-    apiKey: "AIzaSyDmFc0lDVUoI_IGKE0eamjoKjfwN8yHcaI",
-    authDomain: "campus-pigeon.firebaseapp.com",
-    projectId: "campus-pigeon",
-    storageBucket: "campus-pigeon.appspot.com",
-    messagingSenderId: "298095525359",
-    appId: "1:298095525359:web:0b353ab9b8fcbf75a24a1a",
-    measurementId: "G-FW1KD3RY9B"
+//     apiKey: "",
+//     authDomain: "",
+//     projectId: "",
+//     storageBucket: "",
+//     messagingSenderId: "",
+//     appId: "",
+//     measurementId: ""
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
