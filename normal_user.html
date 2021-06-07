@@ -235,4 +235,243 @@
     </script>
     <script src="./js/popup.js"></script>
 </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal User</title>
+
+    <!-- Profile Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+    <!-------------Owl-Carousel----------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <!------------------------ Navigation ------------------------------>
+    
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray"><img class="nav-logo" src="./assets/Picture1455.png" alt=""></a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="#"><i class="fas fa-user" onclick="button_popupProfile()"></i></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="home()">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Categories</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" >Archives</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="page1()">Pages</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Contact us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" id="btn-logout" onclick="logout()">SignOut</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!----------x------------- Navigation --------------x--------------->
+
+         <!-------------------------Popup Profile------------------------------>
+         <div  class="popup">
+            <div class="popup-content">
+                <a href="#" class="close"><i class="far fa-times-circle"></i></a>
+                <!-- <img class="profile_img" src="./assets/2x/baseline_account_circle_black_24dp.png" alt="user image"> -->
+                <i class="material-icons">account_circle</i>
+                <div class="profile_name"><p id="profile_name"></p></div>
+                <div class="profile_id"><p id="profile_email"></p></div>
+            </div>
+        </div>
+    
+        <!-------------x-----------Popup Profile--------------x--------------->
+
+    <main>
+        <section class="site-title1">
+            <div id="user-div" class="site-background1">
+                <img src="./assets/1578668223024.png" alt="user">
+                <h1>GU-Bulletin</h1>
+                <h2>Welcome Back!</h2>
+            
+                <button class="btn"><a href="#section1">Explore</a></button>
+                
+            
+            </div>
+        </section>
+
+        <!----------Site Title------------>
+        <section class="container" id="section1">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="container mt-2">
+                        <div class="row mt-4" id="posts">
+                        </div>
+                    </div>
+                    <div class="pagination flex-row">
+                        <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="pages">1</a>
+                        <a href="#" class="pages">2</a>
+                        <a href="#" class="pages">3</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    <div class="category">
+                        <h2>Course Category</h2>
+                        <ul class="category-list">
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                                <a href="#">SCSE</a>
+                                <span>(05)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <a href="#">ECEE</a>
+                                <span>(02)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                                <a href="#">GSOA</a>
+                                <span>(07)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                                <a href="#">MBA</a>
+                                <span>(01)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="#">BBA</a>
+                                <span>(08)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popular-post">
+                        <h2>Calendar</h2>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                            <div class="post-image">
+                                <div>
+                                    <img src="#" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2021</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">Assignment Submission</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <div>
+                                    <img src="#" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2021</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">Assignment Submission</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <div>
+                                    <img src="#" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2021</span>
+                                    <span>2 Commets</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">Quiz</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="500">
+                            <div class="post-image">
+                                <div>
+                                    <img src="#" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2021</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">Quiz</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <div>
+                                    <img src="#" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2021</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">Quiz</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    </main>
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/posts_normal.js"></script>
+    <script>
+        function home(){window.location.replace("index.html")}
+        function page1(){window.location.replace("page1.html")}
+    </script>
+    <script src="./js/popup.js"></script>
+</body>
+
 </html>
