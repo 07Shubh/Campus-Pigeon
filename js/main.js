@@ -24,12 +24,15 @@ var firebaseConfig = {
     }
   });
 
+ var email = undefined;
+
   function login(){
-    var email = document.getElementById("email_field").value;
+    email = document.getElementById("email_field").value;
     var password = document.getElementById("password_field").value;
 
     if(email == "admin" && password == "shubh"){
-        window.location.replace("admin_page.html")
+        window.location.replace(`normal_user.html?email=${email}`)
+        // window.email_id = email;
     }
 
     else{
@@ -37,8 +40,9 @@ var firebaseConfig = {
       .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
-        window.location.replace("normal_user.html")
-        // ...
+        email = user.email
+        window.location.replace(`normal_user.html?email=${email}`)
+ 
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -47,6 +51,12 @@ var firebaseConfig = {
       });
     }
   }
+
+  const params = new URLSearchParams(window.location.search)
+  var email_id = params.get("email")
+  document.getElementById("profile_email").innerHTML ="Email ID: "+ email_id;
+  document.getElementById("profile_name").innerHTML = "Name: "+email_id.split('@')[0];
+
 
   function logout(){
     firebase.auth().signOut().then(() => {
