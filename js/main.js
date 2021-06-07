@@ -31,7 +31,7 @@ var firebaseConfig = {
     var password = document.getElementById("password_field").value;
 
     if(email == "admin" && password == "shubh"){
-        window.location.replace(`normal_user.html?email=${email}`)
+        window.location.replace(`admin_page.html?email=${email}`)
         // window.email_id = email;
     }
 
