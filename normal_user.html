@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Normal User</title>
 
+    <!-- Profile Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="./css/all.css">
 
@@ -34,7 +37,7 @@
             <div>
                 <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="#"><i class="fas fa-user"></i></a>
+                        <a href="#"><i class="fas fa-user" onclick="button_popupProfile()"></i></a>
                     </li>
                     <li class="nav-link">
                         <a href="#" onclick="home()">Home</a>
@@ -43,7 +46,7 @@
                         <a href="#">Categories</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Archives</a>
+                        <a href="#" >Archives</a>
                     </li>
                     <li class="nav-link">
                         <a href="#" onclick="page1()">Pages</a>
@@ -66,6 +69,19 @@
     </nav>
 
     <!----------x------------- Navigation --------------x--------------->
+
+         <!-------------------------Popup Profile------------------------------>
+         <div  class="popup">
+            <div class="popup-content">
+                <a href="#" class="close"><i class="far fa-times-circle"></i></a>
+                <!-- <img class="profile_img" src="./assets/2x/baseline_account_circle_black_24dp.png" alt="user image"> -->
+                <i class="material-icons">account_circle</i>
+                <div class="profile_name"><p id="profile_name"></p></div>
+                <div class="profile_id"><p id="profile_email"></p></div>
+            </div>
+        </div>
+    
+        <!-------------x-----------Popup Profile--------------x--------------->
 
     <main>
         <section class="site-title1">
@@ -217,5 +233,6 @@
         function home(){window.location.replace("index.html")}
         function page1(){window.location.replace("page1.html")}
     </script>
+    <script src="./js/popup.js"></script>
 </body>
 </html>
